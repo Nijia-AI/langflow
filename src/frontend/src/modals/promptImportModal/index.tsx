@@ -380,29 +380,22 @@ function GraphApp({ addFlow, setModalOpen }) {
 	};
 
 	const promptStr =
-		'构建一个工作流，从“AzureChatOpenAI”、“PromptTemplate”输出到同一个“LLMChain”';
+		'帮我创建一个工作流，从‘openai组件’，和‘prompt组件’，到同一个‘llm组件‘';
 
-	const apikey = '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';
+	const apiKey = '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';
 
 	const createGraph = () => {
 		document.body.style.cursor = 'wait';
 
 		document.getElementsByClassName('generateButton')[0].disabled = true;
 		const prompt = document.getElementsByClassName('searchBar')[0].value;
-		const apiKey =
-			document.getElementsByClassName('apiKeyTextField')[0].value;
 
 		queryPrompt(prompt, apiKey);
 	};
 
 	return (
 		<div className='container'>
-			<h1 className='headerText'>GraphGPT 🔎</h1>
-			<p className='subheaderText'>
-				Build complex, directed graphs to add structure to your ideas
-				using natural language. Understand the relationships between
-				people, systems, and maybe solve a mystery.
-			</p>
+			<p className='subheaderText mt-20'>Generate Flow with Prompt 🔎</p>
 			<center>
 				<div className='inputContainer'>
 					<textarea
@@ -410,11 +403,11 @@ function GraphApp({ addFlow, setModalOpen }) {
 						className='searchBar'
 						placeholder='Describe your graph...'
 					></textarea>
-					<input
+					{/* <input
 						className='apiKeyTextField'
 						type='password'
 						placeholder='Enter your OpenAI API key...'
-					></input>
+					></input> */}
 					<button className='generateButton' onClick={createGraph}>
 						Generate
 					</button>
