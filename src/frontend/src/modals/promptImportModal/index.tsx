@@ -382,7 +382,7 @@ function GraphApp({ addFlow, setModalOpen }) {
 	const promptStr =
 		'帮我创建一个工作流，从‘openai组件’，和‘prompt组件’，到同一个‘llm组件‘';
 
-	const apiKey = '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';
+	const apiKey = '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';
 
 	const createGraph = () => {
 		document.body.style.cursor = 'wait';
